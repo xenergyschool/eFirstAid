@@ -4,6 +4,7 @@ $params = require(__DIR__ . '/params.php');
 
 $config = [
     'id' => 'basic',
+    'defaultRoute'=>'efa',
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
     'components' => [
@@ -43,7 +44,22 @@ $config = [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
+                
+                'admin'=>'efa/index'
             ],
+        ],
+        'watsondialog'=>[
+            
+            'class' => 'app\efa\WatsonDialog',
+            'baseUrl'=>'https://watson-api-explorer.mybluemix.net/dialog/api/v1/', //'https://gateway.watsonplatform.net/dialog/api/v1/
+            'username'=>'dfd28718-fa2a-458a-9077-a2e3cdc106bc',
+            'password'=>'Nr2RcpM0cukd',
+            'dialog_id'=>'f4f1e1ee-addc-44eb-834a-57dc1b91cb38'
+            ],
+         'assetManager' => [
+          //  'linkAssets' => true,
+          //   'appendTimestamp' => true,
+             'forceCopy'=> true
         ],
         
         
@@ -62,6 +78,7 @@ if (YII_ENV_DEV) {
     $config['modules']['gii'] = [
         'class' => 'yii\gii\Module',
     ];
+ 
 }
 
 return $config;

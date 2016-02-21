@@ -1,0 +1,27 @@
+{
+	"thumbnail": "burns.jpg",
+	"steps": [{
+		"title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus at dui semper, laoreet nulla nec, molestie felis.",
+		"description": "In viverra tellus vitae sapien interdum semper. Nullam ac interdum magna, sed hendrerit odio. Nunc non elementum sapien. Maecenas nec diam sapien. Integer convallis sapien turpis, et commodo sem convallis quis. Sed aliquam arcu sem, eu vehicula lorem pharetra vitae. Nullam nec nisl eu ex hendrerit aliquam.",
+		"image": ""
+	}, {
+		"title": "Curabitur et mollis dui, ac blandit justo. Pellentesque at tincidunt purus. Mauris cursus, purus a tempus bibendum, purus risus convallis lectus, nec vulputate metus nunc quis sapien.",
+		"description": "Sed vitae imperdiet diam. Duis volutpat consectetur turpis eu ultrices. Curabitur non tristique nunc. Fusce gravida mi nec purus efficitur malesuada. In pellentesque tincidunt dapibus. Aliquam semper rhoncus lacus, id mattis lacus bibendum eu. Aenean ullamcorper, ante hendrerit ultrices pulvinar, dui nunc fringilla metus, posuere commodo urna diam at felis.",
+		"image": ""
+	}, {
+		"title": "Suspendisse vel enim ante. Sed nec hendrerit est, vel laoreet arcu. Vestibulum sollicitudin mattis mi, eget accumsan nibh. Nam a purus a turpis ultricies finibus quis nec eros. ",
+		"description": "Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Pellentesque suscipit nunc a augue viverra, at feugiat ex scelerisque. Sed felis enim, pellentesque nec scelerisque nec, laoreet ac lacus. Nam volutpat lectus lacus, in faucibus lectus porta a. Quisque sit amet libero scelerisque, suscipit erat non, ultrices nulla. Quisque ornare, erat at efficitur tempor, enim sem dictum lectus, malesuada feugiat ligula lectus nec sem.",
+		"image": ""
+	}],
+	"video": "Ns1DPvXVO6I",
+	"faq": [{
+		"question": "Suspendisse eget luctus risus?",
+		"answer": "Donec volutpat dolor non suscipit pulvinar. Suspendisse aliquet massa id blandit convallis. Maecenas justo leo, ultrices non dui nec, tincidunt pharetra nunc. Pellentesque condimentum sollicitudin purus, ut maximus leo aliquam vitae. Praesent finibus lacinia lorem et tincidunt."
+	}, {
+		"question": "Pellentesque semper laoreet commodo?",
+		"answer": "In eu diam pharetra, scelerisque elit sed, lacinia ante. Donec maximus, ipsum eget maximus placerat, libero nibh aliquam turpis, sit amet tristique est sem eget turpis. Nam condimentum dolor vel sem aliquam, et imperdiet metus tristique."
+	}, {
+		"question": "Donec eu mauris pretium, gravida ligula ac, porttitor eros?",
+		"answer": "Mauris a purus dui. Nulla sagittis, nulla nec mattis imperdiet, velit quam fermentum tellus, quis congue velit justo eu elit. Nunc molestie ante lorem, at iaculis orci facilisis vel. Vestibulum placerat dapibus quam, condimentum rhoncus ligula vestibulum id. Proin ultrices, justo sed accumsan sodales, nisl elit tempor nisi, vitae ultricies nunc arcu quis enim. Integer eu tincidunt sem. "
+	}]
+}

@@ -91,4 +91,16 @@ class SiteController extends Controller
     {
         return $this->render('about');
     }
+    
+    
+    public function actionTest(){
+        
+        
+        $test = Yii::$app->watsondialog->getDialogs();
+        echo '<pre>';
+        echo var_export($test);
+        echo '</pre>';
+        
+    }
+    
 }

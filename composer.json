@@ -18,7 +18,12 @@
         "yiisoft/yii2": ">=2.0.5",
         "yiisoft/yii2-bootstrap": "*",
         "yiisoft/yii2-swiftmailer": "*",
-        "yiisoft/yii2-httpclient": "~2.0.0@dev"
+        "yiisoft/yii2-httpclient": "~2.0.0@dev",
+        "bower-asset/riot": "2.3.*",
+        "bower-asset/jquery-form": "~3.46.0",
+        "bower-asset/fontawesome":"*",
+        "bower-asset/moment":"*",
+        "bower-asset/jquery.nicescroll": "~3.6.6"
     },
     "require-dev": {
         "yiisoft/yii2-codeception": "*",

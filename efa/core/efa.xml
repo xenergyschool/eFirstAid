@@ -1,0 +1,1939 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<dialog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="WatsonDialogDocument_1.0.xsd">
+
+	<flow>
+
+		<folder label="Main" id="Main" >
+			<output>
+				<prompt selectionType="RANDOM">
+					<item>Hello, I am EFA - Your Virtual 'First Aid' Assistance.</item>
+				</prompt>
+				<goto ref="getUserInput_123" />
+			</output>
+			<getUserInput id="getUserInput_123">
+				
+				<search ref="folder_2449611" />
+				<search ref="folder_2449613" />
+				<search ref="folder_2449614" />
+				<search ref="folder_2449615" />
+				<search ref="folder_2449616" />
+
+				<default>
+					<output>
+						<prompt selectionType="RANDOM">
+							<item>
+							I am sorry, I did not understand your question.
+							Please try to say it again in other words.
+							</item>
+						</prompt>
+					</output>
+				</default>
+			</getUserInput>
+		</folder>
+
+		<folder label="Library" id="Library">
+			<folder label="Live Content" id="folder_2449611">
+
+				<input>
+					<grammar>
+						<item>What kind of help do you provide?</item>
+						<item>* list of emergency situation do you have?</item>
+						<item>$ list first aid</item>
+						<item>$ first aid list </item>
+						<item>$ can * do*</item>
+						<item>$ can * do</item>
+					</grammar>
+					<output>
+						<prompt selectionType="RANDOM">
+							<item>I can assist you on the First Aid situation like Alergic, Bleeding, Fracture, Burn, Heart Attack, etc.
+						What emergency situation you are now?
+							</item>
+						</prompt>
+					</output>
+				</input>
+
+				<input>
+					<grammar>
+						<item>Who are you?</item>
+						<item>What is your name?</item>
+						<item>Tell me about yourself</item>
+					</grammar>
+					<output>
+						<prompt selectionType="RANDOM">
+							<item>My name is EFA! I'm virtual FirstAid assistance.</item>
+						</prompt>
+
+					</output>
+				</input>
+				<input>
+					<grammar>
+						<item>alergic</item>
+						<item>allergic</item>
+						<item>allergies</item>
+						<item>anaphylaxis</item>
+						<item>i'm on alergic</item>
+						<item>i have alergic</item>
+						<item>my friend * alergic</item>
+					</grammar>
+					<output>
+						<action varName="emergency_type" operator="SET_TO">allergies</action>
+						<prompt selectionType="RANDOM">
+							<item>First aid for someone who is on allergies &#xD;
+							by displaying 'FAQ', 'Step by Step Guide' or 'Video'?</item>
+							
+						</prompt>
+
+						<getUserInput>
+							<input>
+								<grammar>
+									<item>faq</item>
+								</grammar>
+								<output>
+									<action varName="emergency_media" operator="SET_TO">faq</action>
+									<prompt selectionType="RANDOM">
+										<item>You have selected FAQ on First Aid for allergies &#xD;
+										</item>
+									</prompt>
+								</output>
+							</input>
+							<input>
+								<grammar>
+									<item>steps</item>
+								</grammar>
+								<output>
+									<action varName="emergency_media" operator="SET_TO">steps</action>
+									<prompt selectionType="RANDOM">
+										<item>You have selected First Aid for allergies Step by Step&#xD;
+										</item>
+									</prompt>
+								</output>
+							</input>
+							<input>
+								<grammar>
+									<item>video</item>
+								</grammar>
+								<output>
+									<action varName="emergency_media" operator="SET_TO">video</action>
+									<prompt selectionType="RANDOM">
+										<item>You have selected First Aid for allergies in Video &#xD;
+										</item>
+									</prompt>
+								</output>
+							</input>
+						</getUserInput>
+					</output>
+				</input>
+
+				<input>
+					<grammar>
+						<item>bleeding</item>
+						<item>bleeding heavily</item>
+						<item>i'm on bleeding</item>
+						<item>i have bleeding</item>
+						<item>my friend * bleeding</item>
+					</grammar>
+					<output>
+						<action varName="emergency_type" operator="SET_TO">bleeding</action>
+						<prompt selectionType="RANDOM">
+							<item>First aid for someone who is on bleeding &#xD;
+							by displaying 'FAQ', 'Step by Step Guide' or 'Video'?</item>
+							
+						</prompt>
+
+						<getUserInput>
+							<input>
+								<grammar>
+									<item>faq</item>
+								</grammar>
+								<output>
+									<action varName="emergency_media" operator="SET_TO">faq</action>
+									<prompt selectionType="RANDOM">
+										<item>You have selected FAQ on First Aid for Bleeding &#xD;
+										</item>
+									</prompt>
+								</output>
+							</input>
+							<input>
+								<grammar>
+									<item>steps</item>
+								</grammar>
+								<output>
+									<action varName="emergency_media" operator="SET_TO">steps</action>
+									<prompt selectionType="RANDOM">
+										<item>You have selected First Aid for Bleeding Step by Step&#xD;
+										</item>
+									</prompt>
+								</output>
+							</input>
+							<input>
+								<grammar>
+									<item>video</item>
+								</grammar>
+								<output>
+									<action varName="emergency_media" operator="SET_TO">video</action>
+									<prompt selectionType="RANDOM">
+										<item>You have selected First Aid for Bleeding in Video &#xD;
+										</item>
+									</prompt>
+								</output>
+							</input>
+						</getUserInput>
+					</output>
+				</input>
+				<input>
+					<grammar>
+						<item>Stroke</item>
+						<item>Brain attack</item>
+						<item>i'm on stroke</item>
+						<item>i have stroke</item>
+						<item>my friend * stroke</item>
+					</grammar>
+					<output>
+						<action varName="emergency_type" operator="SET_TO">stroke</action>
+						<prompt selectionType="RANDOM">
+							<item>First aid for someone who is on stroke &#xD;
+							by displaying 'FAQ', 'Step by Step Guide' or 'Video'?</item>
+							
+						</prompt>
+
+						<getUserInput>
+							<input>
+								<grammar>
+									<item>faq</item>
+								</grammar>
+								<output>
+									<action varName="emergency_media" operator="SET_TO">faq</action>
+									<prompt selectionType="RANDOM">
+										<item>You have selected FAQ on First Aid for Stroke &#xD;
+										</item>
+									</prompt>
+								</output>
+							</input>
+							<input>
+								<grammar>
+									<item>steps</item>
+								</grammar>
+								<output>
+									<action varName="emergency_media" operator="SET_TO">steps</action>
+									<prompt selectionType="RANDOM">
+										<item>You have selected First Aid for Stroke Step by Step&#xD;
+										</item>
+									</prompt>
+								</output>
+							</input>
+							<input>
+								<grammar>
+									<item>video</item>
+								</grammar>
+								<output>
+									<action varName="emergency_media" operator="SET_TO">video</action>
+									<prompt selectionType="RANDOM">
+										<item>You have selected First Aid for Stroke in Video &#xD;
+										</item>
+									</prompt>
+								</output>
+							</input>
+						</getUserInput>
+					</output>
+				</input>
+				<input>
+					<grammar>
+						<item>heart attack</item>
+						<item>i'm on heart attack</item>
+						<item>i have heart attack</item>
+						<item>my friend * heart attack</item>
+					</grammar>
+					<output>
+						<action varName="emergency_type" operator="SET_TO">heart attack</action>
+						<prompt selectionType="RANDOM">
+							<item>First aid for someone who is on heart attack &#xD;
+							by displaying 'FAQ', 'Step by Step Guide' or 'Video'?</item>
+							
+						</prompt>
+
+						<getUserInput>
+							<input>
+								<grammar>
+									<item>faq</item>
+								</grammar>
+								<output>
+									<action varName="emergency_media" operator="SET_TO">faq</action>
+									<prompt selectionType="RANDOM">
+										<item>You have selected FAQ on First Aid for heart attack &#xD;
+										</item>
+									</prompt>
+								</output>
+							</input>
+							<input>
+								<grammar>
+									<item>steps</item>
+								</grammar>
+								<output>
+									<action varName="emergency_media" operator="SET_TO">steps</action>
+									<prompt selectionType="RANDOM">
+										<item>You have selected First Aid for heart attack Step by Step&#xD;
+										</item>
+									</prompt>
+								</output>
+							</input>
+							<input>
+								<grammar>
+									<item>video</item>
+								</grammar>
+								<output>
+									<action varName="emergency_media" operator="SET_TO">video</action>
+									<prompt selectionType="RANDOM">
+										<item>You have selected First Aid for heart attack in Video &#xD;
+										</item>
+									</prompt>
+								</output>
+							</input>
+						</getUserInput>
+					</output>
+				</input>
+				
+				<input>
+					<grammar>
+						<item>broken bone</item>
+						<item>i'm on broken bone</item>
+						<item>i have broken bone</item>
+						<item>my friend * broken bone</item>
+					</grammar>
+					<output>
+						<action varName="emergency_type" operator="SET_TO">broken bone</action>
+						<prompt selectionType="RANDOM">
+							<item>First aid for someone who is on broken bone &#xD;
+							by displaying 'FAQ', 'Step by Step Guide' or 'Video'?</item>
+							
+						</prompt>
+
+						<getUserInput>
+							<input>
+								<grammar>
+									<item>faq</item>
+								</grammar>
+								<output>
+									<action varName="emergency_media" operator="SET_TO">faq</action>
+									<prompt selectionType="RANDOM">
+										<item>You have selected FAQ on First Aid for broken bone &#xD;
+										</item>
+									</prompt>
+								</output>
+							</input>
+							<input>
+								<grammar>
+									<item>steps</item>
+								</grammar>
+								<output>
+									<action varName="emergency_media" operator="SET_TO">steps</action>
+									<prompt selectionType="RANDOM">
+										<item>You have selected First Aid for broken bone Step by Step&#xD;
+										</item>
+									</prompt>
+								</output>
+							</input>
+							<input>
+								<grammar>
+									<item>video</item>
+								</grammar>
+								<output>
+									<action varName="emergency_media" operator="SET_TO">video</action>
+									<prompt selectionType="RANDOM">
+										<item>You have selected First Aid for broken bone in Video &#xD;
+										</item>
+									</prompt>
+								</output>
+							</input>
+						</getUserInput>
+					</output>
+				</input>
+				
+				<input>
+					<grammar>
+						<item>head injury</item>
+						<item>i'm on head injury</item>
+						<item>i have head injury</item>
+						<item>my friend * head injury</item>
+					</grammar>
+					<output>
+						<action varName="emergency_type" operator="SET_TO">headinjury</action>
+						<prompt selectionType="RANDOM">
+							<item>First aid for someone who is on head injury &#xD;
+							by displaying 'FAQ', 'Step by Step Guide' or 'Video'?</item>
+							
+						</prompt>
+
+						<getUserInput>
+							<input>
+								<grammar>
+									<item>faq</item>
+								</grammar>
+								<output>
+									<action varName="emergency_media" operator="SET_TO">faq</action>
+									<prompt selectionType="RANDOM">
+										<item>You have selected FAQ on First Aid for head injury &#xD;
+										</item>
+									</prompt>
+								</output>
+							</input>
+							<input>
+								<grammar>
+									<item>steps</item>
+								</grammar>
+								<output>
+									<action varName="emergency_media" operator="SET_TO">steps</action>
+									<prompt selectionType="RANDOM">
+										<item>You have selected First Aid for head injury Step by Step&#xD;
+										</item>
+									</prompt>
+								</output>
+							</input>
+							<input>
+								<grammar>
+									<item>video</item>
+								</grammar>
+								<output>
+									<action varName="emergency_media" operator="SET_TO">video</action>
+									<prompt selectionType="RANDOM">
+										<item>You have selected First Aid for head injury in Video &#xD;
+										</item>
+									</prompt>
+								</output>
+							</input>
+						</getUserInput>
+					</output>
+				</input>
+				<input>
+					<grammar>
+						<item>choking</item>
+						<item>i'm on choking</item>
+						<item>i have choking</item>
+						<item>my friend * choking</item>
+					</grammar>
+					<output>
+						<action varName="emergency_type" operator="SET_TO">choking</action>
+						<prompt selectionType="RANDOM">
+							<item>First aid for someone who is on choking &#xD;
+							by displaying 'FAQ', 'Step by Step Guide' or 'Video'?</item>
+							
+						</prompt>
+
+						<getUserInput>
+							<input>
+								<grammar>
+									<item>faq</item>
+								</grammar>
+								<output>
+									<action varName="emergency_media" operator="SET_TO">faq</action>
+									<prompt selectionType="RANDOM">
+										<item>You have selected FAQ on First Aid for choking &#xD;
+										</item>
+									</prompt>
+								</output>
+							</input>
+							<input>
+								<grammar>
+									<item>steps</item>
+								</grammar>
+								<output>
+									<action varName="emergency_media" operator="SET_TO">steps</action>
+									<prompt selectionType="RANDOM">
+										<item>You have selected First Aid for choking Step by Step&#xD;
+										</item>
+									</prompt>
+								</output>
+							</input>
+							<input>
+								<grammar>
+									<item>video</item>
+								</grammar>
+								<output>
+									<action varName="emergency_media" operator="SET_TO">video</action>
+									<prompt selectionType="RANDOM">
+										<item>You have selected First Aid for choking in Video &#xD;
+										</item>
+									</prompt>
+								</output>
+							</input>
+						</getUserInput>
+					</output>
+				</input>
+				<input>
+					<grammar>
+						<item>Unconscious and breathing</item>
+						<item>i'm on Unconscious and breathing</item>
+						<item>i have Unconscious and breathing</item>
+						<item>my friend * Unconscious and breathing</item>
+					</grammar>
+					<output>
+						<action varName="emergency_type" operator="SET_TO">Unconscious and breathing</action>
+						<prompt selectionType="RANDOM">
+							<item>First aid for someone who is on Unconscious and breathing &#xD;
+							by displaying 'FAQ', 'Step by Step Guide' or 'Video'?</item>
+							
+						</prompt>
+
+						<getUserInput>
+							<input>
+								<grammar>
+									<item>faq</item>
+								</grammar>
+								<output>
+									<action varName="emergency_media" operator="SET_TO">faq</action>
+									<prompt selectionType="RANDOM">
+										<item>You have selected FAQ on First Aid for Unconscious and breathing &#xD;
+										</item>
+									</prompt>
+								</output>
+							</input>
+							<input>
+								<grammar>
+									<item>steps</item>
+								</grammar>
+								<output>
+									<action varName="emergency_media" operator="SET_TO">steps</action>
+									<prompt selectionType="RANDOM">
+										<item>You have selected First Aid for Unconscious and breathing Step by Step&#xD;
+										</item>
+									</prompt>
+								</output>
+							</input>
+							<input>
+								<grammar>
+									<item>video</item>
+								</grammar>
+								<output>
+									<action varName="emergency_media" operator="SET_TO">video</action>
+									<prompt selectionType="RANDOM">
+										<item>You have selected First Aid for Unconscious and breathing in Video &#xD;
+										</item>
+									</prompt>
+								</output>
+							</input>
+						</getUserInput>
+					</output>
+				</input>
+				
+				<input>
+					<grammar>
+						<item>Unconscious and not breathing</item>
+						<item>i'm on Unconscious and not breathing</item>
+						<item>i have Unconscious and not breathing</item>
+						<item>my friend * Unconscious and not breathing</item>
+					</grammar>
+					<output>
+						<action varName="emergency_type" operator="SET_TO">Unconscious and not breathing</action>
+						<prompt selectionType="RANDOM">
+							<item>First aid for someone who is on Unconscious and not breathing &#xD;
+							by displaying 'FAQ', 'Step by Step Guide' or 'Video'?</item>
+							
+						</prompt>
+
+						<getUserInput>
+							<input>
+								<grammar>
+									<item>faq</item>
+								</grammar>
+								<output>
+									<action varName="emergency_media" operator="SET_TO">faq</action>
+									<prompt selectionType="RANDOM">
+										<item>You have selected FAQ on First Aid for Unconscious and not breathing &#xD;
+										</item>
+									</prompt>
+								</output>
+							</input>
+							<input>
+								<grammar>
+									<item>steps</item>
+								</grammar>
+								<output>
+									<action varName="emergency_media" operator="SET_TO">steps</action>
+									<prompt selectionType="RANDOM">
+										<item>You have selected First Aid for Unconscious and not breathing Step by Step&#xD;
+										</item>
+									</prompt>
+								</output>
+							</input>
+							<input>
+								<grammar>
+									<item>video</item>
+								</grammar>
+								<output>
+									<action varName="emergency_media" operator="SET_TO">video</action>
+									<prompt selectionType="RANDOM">
+										<item>You have selected First Aid for Unconscious and not breathing in Video &#xD;
+										</item>
+									</prompt>
+								</output>
+							</input>
+						</getUserInput>
+					</output>
+				</input>
+				
+				<input>
+					<grammar>
+						<item>Unconscious and not breathing when an AED is available</item>
+						<item>i'm on Unconscious and not breathing when an AED is available</item>
+						<item>i have Unconscious and not breathing when an AED is available</item>
+						<item>my friend * Unconscious and not breathing when an AED is available</item>
+					</grammar>
+					<output>
+						<action varName="emergency_type" operator="SET_TO">Unconscious and not breathing when an AED is available</action>
+						<prompt selectionType="RANDOM">
+							<item>First aid for someone who is on Unconscious and not breathing &#xD;
+							by displaying 'FAQ', 'Step by Step Guide' or 'Video'?</item>
+							
+						</prompt>
+
+						<getUserInput>
+							<input>
+								<grammar>
+									<item>faq</item>
+								</grammar>
+								<output>
+									<action varName="emergency_media" operator="SET_TO">faq</action>
+									<prompt selectionType="RANDOM">
+										<item>You have selected FAQ on First Aid for Unconscious and not breathing when an AED is available &#xD;
+										</item>
+									</prompt>
+								</output>
+							</input>
+							<input>
+								<grammar>
+									<item>steps</item>
+								</grammar>
+								<output>
+									<action varName="emergency_media" operator="SET_TO">steps</action>
+									<prompt selectionType="RANDOM">
+										<item>You have selected First Aid for Unconscious and not breathing when an AED is available Step by Step&#xD;
+										</item>
+									</prompt>
+								</output>
+							</input>
+							<input>
+								<grammar>
+									<item>video</item>
+								</grammar>
+								<output>
+									<action varName="emergency_media" operator="SET_TO">video</action>
+									<prompt selectionType="RANDOM">
+										<item>You have selected First Aid for Unconscious and not breathing when an AED is available in Video &#xD;
+										</item>
+									</prompt>
+								</output>
+							</input>
+						</getUserInput>
+					</output>
+				</input>
+				
+				<input>
+					<grammar>
+						<item>epilepsy</item>
+						<item>seizures</item>
+						<item>i'm on epilepsy</item>
+						<item>i have epilepsy</item>
+						<item>my friend * epilepsy</item>
+					</grammar>
+					<output>
+						<action varName="emergency_type" operator="SET_TO">epilepsy</action>
+						<prompt selectionType="RANDOM">
+							<item>First aid for someone who is on epilepsy &#xD;
+							by displaying 'FAQ', 'Step by Step Guide' or 'Video'?</item>
+							
+						</prompt>
+
+						<getUserInput>
+							<input>
+								<grammar>
+									<item>faq</item>
+								</grammar>
+								<output>
+									<action varName="emergency_media" operator="SET_TO">faq</action>
+									<prompt selectionType="RANDOM">
+										<item>You have selected FAQ on First Aid for epilepsy &#xD;
+										</item>
+									</prompt>
+								</output>
+							</input>
+							<input>
+								<grammar>
+									<item>steps</item>
+								</grammar>
+								<output>
+									<action varName="emergency_media" operator="SET_TO">steps</action>
+									<prompt selectionType="RANDOM">
+										<item>You have selected First Aid for epilepsy Step by Step&#xD;
+										</item>
+									</prompt>
+								</output>
+							</input>
+							<input>
+								<grammar>
+									<item>video</item>
+								</grammar>
+								<output>
+									<action varName="emergency_media" operator="SET_TO">video</action>
+									<prompt selectionType="RANDOM">
+										<item>You have selected First Aid for epilepsy in Video &#xD;
+										</item>
+									</prompt>
+								</output>
+							</input>
+						</getUserInput>
+					</output>
+				</input>
+				
+				<input>
+					<grammar>
+						<item>diabetes</item>
+						<item>i'm on diabetes</item>
+						<item>i have diabetes</item>
+						<item>my friend * diabetes</item>
+					</grammar>
+					<output>
+						<action varName="emergency_type" operator="SET_TO">diabetes</action>
+						<prompt selectionType="RANDOM">
+							<item>First aid for someone who is on diabetes &#xD;
+							by displaying 'FAQ', 'Step by Step Guide' or 'Video'?</item>
+							
+						</prompt>
+
+						<getUserInput>
+							<input>
+								<grammar>
+									<item>faq</item>
+								</grammar>
+								<output>
+									<action varName="emergency_media" operator="SET_TO">faq</action>
+									<prompt selectionType="RANDOM">
+										<item>You have selected FAQ on First Aid for diabetes &#xD;
+										</item>
+									</prompt>
+								</output>
+							</input>
+							<input>
+								<grammar>
+									<item>steps</item>
+								</grammar>
+								<output>
+									<action varName="emergency_media" operator="SET_TO">steps</action>
+									<prompt selectionType="RANDOM">
+										<item>You have selected First Aid for diabetes Step by Step&#xD;
+										</item>
+									</prompt>
+								</output>
+							</input>
+							<input>
+								<grammar>
+									<item>video</item>
+								</grammar>
+								<output>
+									<action varName="emergency_media" operator="SET_TO">video</action>
+									<prompt selectionType="RANDOM">
+										<item>You have selected First Aid for diabetes in Video &#xD;
+										</item>
+									</prompt>
+								</output>
+							</input>
+						</getUserInput>
+					</output>
+				</input>
+				
+				<input>
+					<grammar>
+						<item>asthma</item>
+						<item>asthma attack</item>
+						<item>i'm on asthma</item>
+						<item>i have asthma</item>
+						<item>my friend * asthma</item>
+					</grammar>
+					<output>
+						<action varName="emergency_type" operator="SET_TO">asthmaattack</action>
+						<prompt selectionType="RANDOM">
+							<item>First aid for someone who is on asthma &#xD;
+							by displaying 'FAQ', 'Step by Step Guide' or 'Video'?</item>
+							
+						</prompt>
+
+						<getUserInput>
+							<input>
+								<grammar>
+									<item>faq</item>
+								</grammar>
+								<output>
+									<action varName="emergency_media" operator="SET_TO">faq</action>
+									<prompt selectionType="RANDOM">
+										<item>You have selected FAQ on First Aid for asthma &#xD;
+										</item>
+									</prompt>
+								</output>
+							</input>
+							<input>
+								<grammar>
+									<item>steps</item>
+								</grammar>
+								<output>
+									<action varName="emergency_media" operator="SET_TO">steps</action>
+									<prompt selectionType="RANDOM">
+										<item>You have selected First Aid for asthma Step by Step&#xD;
+										</item>
+									</prompt>
+								</output>
+							</input>
+							<input>
+								<grammar>
+									<item>video</item>
+								</grammar>
+								<output>
+									<action varName="emergency_media" operator="SET_TO">video</action>
+									<prompt selectionType="RANDOM">
+										<item>You have selected First Aid for asthma in Video &#xD;
+										</item>
+									</prompt>
+								</output>
+							</input>
+						</getUserInput>
+					</output>
+				</input>
+				
+				<input>
+					<grammar>
+						<item>poisoning</item>
+						<item>i'm on poisoning</item>
+						<item>i have poisoning</item>
+						<item>my friend * poisoning</item>
+					</grammar>
+					<output>
+						<action varName="emergency_type" operator="SET_TO">poisoning</action>
+						<prompt selectionType="RANDOM">
+							<item>First aid for someone who is on poisoning &#xD;
+							by displaying 'FAQ', 'Step by Step Guide' or 'Video'?</item>
+							
+						</prompt>
+
+						<getUserInput>
+							<input>
+								<grammar>
+									<item>faq</item>
+								</grammar>
+								<output>
+									<action varName="emergency_media" operator="SET_TO">faq</action>
+									<prompt selectionType="RANDOM">
+										<item>You have selected FAQ on First Aid for poisoning &#xD;
+										</item>
+									</prompt>
+								</output>
+							</input>
+							<input>
+								<grammar>
+									<item>steps</item>
+								</grammar>
+								<output>
+									<action varName="emergency_media" operator="SET_TO">steps</action>
+									<prompt selectionType="RANDOM">
+										<item>You have selected First Aid for poisoning Step by Step&#xD;
+										</item>
+									</prompt>
+								</output>
+							</input>
+							<input>
+								<grammar>
+									<item>video</item>
+								</grammar>
+								<output>
+									<action varName="emergency_media" operator="SET_TO">video</action>
+									<prompt selectionType="RANDOM">
+										<item>You have selected First Aid for poisoning in Video &#xD;
+										</item>
+									</prompt>
+								</output>
+							</input>
+						</getUserInput>
+					</output>
+				</input>
+				
+				<input>
+					<grammar>
+						<item>distress</item>
+						<item>i'm on distress</item>
+						<item>i have distress</item>
+						<item>my friend * distress</item>
+					</grammar>
+					<output>
+						<action varName="emergency_type" operator="SET_TO">distress</action>
+						<prompt selectionType="RANDOM">
+							<item>First aid for someone who is on distress &#xD;
+							by displaying 'FAQ', 'Step by Step Guide' or 'Video'?</item>
+							
+						</prompt>
+
+						<getUserInput>
+							<input>
+								<grammar>
+									<item>faq</item>
+								</grammar>
+								<output>
+									<action varName="emergency_media" operator="SET_TO">faq</action>
+									<prompt selectionType="RANDOM">
+										<item>You have selected FAQ on First Aid for distress &#xD;
+										</item>
+									</prompt>
+								</output>
+							</input>
+							<input>
+								<grammar>
+									<item>steps</item>
+								</grammar>
+								<output>
+									<action varName="emergency_media" operator="SET_TO">steps</action>
+									<prompt selectionType="RANDOM">
+										<item>You have selected First Aid for distress Step by Step&#xD;
+										</item>
+									</prompt>
+								</output>
+							</input>
+							<input>
+								<grammar>
+									<item>video</item>
+								</grammar>
+								<output>
+									<action varName="emergency_media" operator="SET_TO">video</action>
+									<prompt selectionType="RANDOM">
+										<item>You have selected First Aid for distress in Video &#xD;
+										</item>
+									</prompt>
+								</output>
+							</input>
+						</getUserInput>
+					</output>
+				</input>
+				
+				<input>
+					<grammar>
+						<item>sprains</item>
+						<item>strains</item>
+						<item>i'm on sprains</item>
+						<item>i have sprains</item>
+						<item>my friend * sprains</item>
+					</grammar>
+					<output>
+						<action varName="emergency_type" operator="SET_TO">sprains</action>
+						<prompt selectionType="RANDOM">
+							<item>First aid for someone who is on sprains &#xD;
+							by displaying 'FAQ', 'Step by Step Guide' or 'Video'?</item>
+							
+						</prompt>
+
+						<getUserInput>
+							<input>
+								<grammar>
+									<item>faq</item>
+								</grammar>
+								<output>
+									<action varName="emergency_media" operator="SET_TO">faq</action>
+									<prompt selectionType="RANDOM">
+										<item>You have selected FAQ on First Aid for sprains &#xD;
+										</item>
+									</prompt>
+								</output>
+							</input>
+							<input>
+								<grammar>
+									<item>steps</item>
+								</grammar>
+								<output>
+									<action varName="emergency_media" operator="SET_TO">steps</action>
+									<prompt selectionType="RANDOM">
+										<item>You have selected First Aid for sprains Step by Step&#xD;
+										</item>
+									</prompt>
+								</output>
+							</input>
+							<input>
+								<grammar>
+									<item>video</item>
+								</grammar>
+								<output>
+									<action varName="emergency_media" operator="SET_TO">video</action>
+									<prompt selectionType="RANDOM">
+										<item>You have selected First Aid for sprains in Video &#xD;
+										</item>
+									</prompt>
+								</output>
+							</input>
+						</getUserInput>
+					</output>
+				</input>
+				
+				<input>
+					<grammar>
+						<item>hypothermia</item>
+						<item>i'm on hypothermia</item>
+						<item>i have hypothermia</item>
+						<item>my friend * hypothermia</item>
+					</grammar>
+					<output>
+						<action varName="emergency_type" operator="SET_TO">hypothermia</action>
+						<prompt selectionType="RANDOM">
+							<item>First aid for someone who is on hypothermia &#xD;
+							by displaying 'FAQ', 'Step by Step Guide' or 'Video'?</item>
+							
+						</prompt>
+
+						<getUserInput>
+							<input>
+								<grammar>
+									<item>faq</item>
+								</grammar>
+								<output>
+									<action varName="emergency_media" operator="SET_TO">faq</action>
+									<prompt selectionType="RANDOM">
+										<item>You have selected FAQ on First Aid for hypothermia &#xD;
+										</item>
+									</prompt>
+								</output>
+							</input>
+							<input>
+								<grammar>
+									<item>steps</item>
+								</grammar>
+								<output>
+									<action varName="emergency_media" operator="SET_TO">steps</action>
+									<prompt selectionType="RANDOM">
+										<item>You have selected First Aid for hypothermia Step by Step&#xD;
+										</item>
+									</prompt>
+								</output>
+							</input>
+							<input>
+								<grammar>
+									<item>video</item>
+								</grammar>
+								<output>
+									<action varName="emergency_media" operator="SET_TO">video</action>
+									<prompt selectionType="RANDOM">
+										<item>You have selected First Aid for hypothermia in Video &#xD;
+										</item>
+									</prompt>
+								</output>
+							</input>
+						</getUserInput>
+					</output>
+				</input>
+				
+				<input>
+					<grammar>
+						<item>meningitis</item>
+						<item>i'm on meningitis</item>
+						<item>i have meningitis</item>
+						<item>my friend * meningitis</item>
+					</grammar>
+					<output>
+						<action varName="emergency_type" operator="SET_TO">meningitis</action>
+						<prompt selectionType="RANDOM">
+							<item>First aid for someone who is on meningitis &#xD;
+							by displaying 'FAQ', 'Step by Step Guide' or 'Video'?</item>
+							
+						</prompt>
+
+						<getUserInput>
+							<input>
+								<grammar>
+									<item>faq</item>
+								</grammar>
+								<output>
+									<action varName="emergency_media" operator="SET_TO">faq</action>
+									<prompt selectionType="RANDOM">
+										<item>You have selected FAQ on First Aid for meningitis &#xD;
+										</item>
+									</prompt>
+								</output>
+							</input>
+							<input>
+								<grammar>
+									<item>steps</item>
+								</grammar>
+								<output>
+									<action varName="emergency_media" operator="SET_TO">steps</action>
+									<prompt selectionType="RANDOM">
+										<item>You have selected First Aid for meningitis Step by Step&#xD;
+										</item>
+									</prompt>
+								</output>
+							</input>
+							<input>
+								<grammar>
+									<item>video</item>
+								</grammar>
+								<output>
+									<action varName="emergency_media" operator="SET_TO">video</action>
+									<prompt selectionType="RANDOM">
+										<item>You have selected First Aid for meningitis in Video &#xD;
+										</item>
+									</prompt>
+								</output>
+							</input>
+						</getUserInput>
+					</output>
+				</input>
+				
+			
+				
+				<input>
+					<grammar>
+						<item>burns</item>
+						<item>i'm on burns</item>
+						<item>i have burns</item>
+						<item>my friend * burns</item>
+					</grammar>
+					<output>
+						<action varName="emergency_type" operator="SET_TO">burns</action>
+						<prompt selectionType="RANDOM">
+							<item>First aid for someone who is on burns &#xD;
+							by displaying 'FAQ', 'Step by Step Guide' or 'Video'?</item>
+							
+						</prompt>
+
+						<getUserInput>
+							<input>
+								<grammar>
+									<item>faq</item>
+								</grammar>
+								<output>
+									<action varName="emergency_media" operator="SET_TO">faq</action>
+									<prompt selectionType="RANDOM">
+										<item>You have selected FAQ on First Aid for burns &#xD;
+										</item>
+									</prompt>
+								</output>
+							</input>
+							<input>
+								<grammar>
+									<item>steps</item>
+								</grammar>
+								<output>
+									<action varName="emergency_media" operator="SET_TO">steps</action>
+									<prompt selectionType="RANDOM">
+										<item>You have selected First Aid for burns Step by Step&#xD;
+										</item>
+									</prompt>
+								</output>
+							</input>
+							<input>
+								<grammar>
+									<item>video</item>
+								</grammar>
+								<output>
+									<action varName="emergency_media" operator="SET_TO">video</action>
+									<prompt selectionType="RANDOM">
+										<item>You have selected First Aid for burns in Video &#xD;
+										</item>
+									</prompt>
+								</output>
+							</input>
+						</getUserInput>
+					</output>
+				</input>
+			</folder>
+
+
+			<folder date="2015-07-10 17:09:15.498" label="OPENING SEQUENCES" id="folder_2449613">
+				<input isAutoLearnCandidate="true"
+                        isRelatedNodeCandidate="true" comment="Hello"
+                        date="2015-07-10 17:09:15.082" gid="2449627">
+					<grammar>
+						<item>GREETING - B2PP</item>
+						<item>hello</item>
+					</grammar>
+					<if date="2015-07-10 17:09:15.086" gid="2458049">
+						<cond varName="Terminal_Exchange"
+                                operator="EQUAL_TO_YES" gid="217364"/>
+					</if>
+					<output isInsertDNRStatement="true"
+                            comment="Hi, how are you today?"
+                            date="2015-07-10 17:09:15.009" gid="2449628">
+						<prompt selectionType="RANDOM">
+							<item>Hi, how are you today?</item>
+						</prompt>
+						<getUserInput date="2015-07-10 17:09:15.094" gid="2449629">
+							<input isAutoLearnCandidate="true"
+                                    isRelatedNodeCandidate="true"
+                                    comment="Fine&#xa;good&#xa;$ I'm good&#xa;$ I'm fine&#xa;well&#xa;$ I'm well&#xa;good thanks"
+                                    date="2015-07-10 17:09:15.098" gid="2449630">
+								<grammar>
+									<item>NEUTRAL REPORT - B2PP</item>
+									<item>$ good *</item>
+									<item>$ good</item>
+									<item>good *</item>
+									<item>$ fine *</item>
+									<item>$ fine</item>
+									<item>fine *</item>
+									<item>$ well *</item>
+									<item>well *</item>
+									<item>$ well</item>
+									<item>well</item>
+									
+								</grammar>
+								<output isInsertDNRStatement="true"
+                                    comment="That's good."
+                                    date="2015-07-10 17:09:15.102" gid="2449631">
+									<prompt selectionType="RANDOM">
+										<item>That's good</item>
+									</prompt>
+									
+								</output>
+							</input>
+							<input isAutoLearnCandidate="true"
+                                    isRelatedNodeCandidate="true"
+                                    comment="$ I'm great&#xa;excellent&#xa;$ I'm excellent&#xa;outstanding&#xa;$ I'm outstanding&#xa;fabulous&#xa;$ I'm fabulous&#xa;$ awesome&#xa;$ terrific"
+                                    date="2015-07-10 17:09:15.106" gid="2449633">
+								<grammar>
+									<item>POSITIVE REPORT - B2PP</item>
+									<item>$ I&amp;apos;m great</item>
+									<item>excellent</item>
+									<item>$ I&amp;apos;m excellent</item>
+									<item>outstanding</item>
+									<item>$ I&amp;apos;m outstanding</item>
+									<item>fabulous</item>
+									<item>$ I&amp;apos;m fabulous</item>
+								</grammar>
+								<output isInsertDNRStatement="true"
+                                    comment="Great to hear!"
+                                    date="2015-07-10 17:09:15.011" gid="2449634">
+									<prompt selectionType="RANDOM">
+										<item>Great to hear</item>
+									</prompt>
+									
+								</output>
+							</input>
+							<input isAutoLearnCandidate="true"
+                                    isRelatedNodeCandidate="true"
+                                    comment="$ not good&#xa;$ not so good&#xa;$ not well&#xa;$ not so well&#xa;$ terrible&#xa;$ awful&#xa;$ worst&#xa;$ bored&#xa;$ sad&#xa;$ tired&#xa;$ hungry&#xa;$ bored"
+                                    date="2015-07-10 17:09:15.114" gid="2449636">
+								<grammar>
+									<item>NEGATIVE REPORT - B2PP</item>
+									<item>$ not good</item>
+									<item>$ not so good</item>
+									<item>$ not well</item>
+									<item>$ not so well</item>
+									<item>$ terrible</item>
+									<item>$ awful</item>
+									<item>$ worst</item>
+									<item>$ bored</item>
+									<item>$ sad</item>
+								</grammar>
+								<output isInsertDNRStatement="true"
+                                    comment="I'm sorry to hear that."
+                                    date="2015-07-10 17:09:15.118" gid="2449637">
+									<prompt selectionType="RANDOM">
+										<item>I'm sorry to hear that.</item>
+									</prompt>
+									
+								</output>
+							</input>
+							
+						</getUserInput>
+					</output>
+				</input>
+				<input isAutoLearnCandidate="true"
+                        isRelatedNodeCandidate="true"
+                        comment="How are you?&#xa;$ how have you been doing&#xa;$ how is it going&#xa;$ how's it going&#xa;$ how are you&#xa;$ what's shaking&#xa;$ what's up"
+                        date="2015-07-10 17:09:15.126" gid="2456645">
+					<grammar>
+						<item>HOW ARE YOU - B1PP</item>
+						<item>$ how have you been doing</item>
+						<item>$ how is it going</item>
+						<item>$ how are you</item>
+						<item>$ what&amp;apos;s shaking</item>
+						<item>$ what&amp;apos;s up</item>
+					</grammar>
+					<output isInsertDNRStatement="true"
+                            comment="Can't complain."
+                            date="2015-07-10 17:09:15.013" gid="2456646">
+						<prompt selectionType="RANDOM">
+							<item>Can't complain.</item>
+						</prompt>
+						
+					</output>
+				</input>
+			</folder>
+			<folder date="2015-07-10 17:09:15.502" label="CLOSING SEQUENCES" id="folder_2449614">
+				<input isAutoLearnCandidate="true"
+                        isRelatedNodeCandidate="true"
+                        comment="I need to go&#xa;$ should be going&#xa;$ should go&#xa;$ need to go&#xa;$ got to go&#xa;$ gotta run&#xa;$ gotta go&#xa;$ need to run&#xa;$ need to leave&#xa;$ have to leave&#xa;$ have to go&#xa;$ gtg"
+                        date="2015-07-10 17:09:15.138" gid="2449642">
+					<grammar>
+						<item>PRE-CLOSING - B1PP</item>
+						<item>$ should be going</item>
+						<item>$ should go</item>
+						<item>$ need to go</item>
+						<item>$ got to go</item>
+						<item>$ gotta run</item>
+						<item>$ gotta go</item>
+						<item>$ need to run</item>
+						<item>$ need to leave</item>
+						<item>$ have to leave</item>
+						<item>$ have to go</item>
+						<item>$ gtg</item>
+					</grammar>
+					<output isInsertDNRStatement="true"
+                            comment="Okay."
+                            date="2015-07-10 17:09:15.142" gid="2449675">
+						<prompt selectionType="RANDOM">
+							<item>Okay</item>
+						</prompt>
+						<output isInsertDNRStatement="true"
+                                comment="Did you find what you were looking for?"
+                                date="2015-07-10 17:09:15.146" gid="2449658">
+							<prompt selectionType="RANDOM">
+								<item>Did you find what you were looking for?</item>
+							</prompt>
+							<getUserInput
+                                    date="2015-07-10 17:09:15.015" gid="2449659">
+								<input isAutoLearnCandidate="true"
+                                    isRelatedNodeCandidate="true"
+                                    comment="Yes.&#xa;$ yes"
+                                    date="2015-07-10 17:09:15.154" gid="2449660">
+									<grammar>
+										<item>CONFIRMATION - B2PP</item>
+										<item>yes</item>
+									</grammar>
+									<action
+                                    varName="Request_Success"
+                                    operator="SET_TO_YES" gid="217207"/>
+									<output
+                                    isInsertDNRStatement="true"
+                                    comment="Excellent!"
+                                    date="2015-07-10 17:09:15.158" gid="2449661">
+										<prompt selectionType="RANDOM">
+											<item>Excellent!</item>
+										</prompt>
+										<output
+                                    isInsertDNRStatement="true"
+                                    comment="Goodbye."
+                                    date="2015-07-10 17:09:15.162" gid="2456466">
+											<prompt selectionType="RANDOM">
+												<item>Goodbye</item>
+											</prompt>
+											<action
+                                    varName="Terminal_Exchange"
+                                    operator="SET_TO_YES" gid="217211"/>
+											<getUserInput
+                                    date="2015-07-10 17:09:15.166" gid="2456938">
+												<input
+                                    isAutoLearnCandidate="true"
+                                    isRelatedNodeCandidate="true"
+                                    comment="Goodbye&#xa;$ goodbye"
+                                    date="2015-07-10 17:09:15.895" gid="2458904">
+													<grammar>
+														<item>Goodbye</item>
+													</grammar>
+													<getUserInput
+                                    date="2015-07-10 17:09:15.017" gid="2458046">
+														<output
+                                    isInsertDNRStatement="true"
+                                    comment="Welcome back!"
+                                    date="2015-07-10 17:09:15.174" gid="2458048">
+															<prompt selectionType="RANDOM">
+																<item>Welcome back!</item>
+															</prompt>
+															<goto
+                                    date="2015-07-10 17:09:15.178"
+                                    gid="2456939" ref="2458201"/>
+														</output>
+													</getUserInput>
+												</input>
+												<goto
+                                    date="2015-07-10 17:09:15.899"
+                                    gid="2458905" ref="2458201"/>
+											</getUserInput>
+										</output>
+									</output>
+								</input>
+								<input isAutoLearnCandidate="true"
+                                    isRelatedNodeCandidate="true"
+                                    comment="No&#xa;$ no"
+                                    date="2015-07-10 17:09:15.182" gid="2449663">
+									<grammar>
+										<item>DISCONFIRMATION - B2PP</item>
+										<item>no</item>
+									</grammar>
+									<action
+                                    varName="Request_Success"
+                                    operator="SET_TO_NO" gid="217208"/>
+									<output
+                                    isInsertDNRStatement="true"
+                                    comment="Would you like to try again?"
+                                    date="2015-07-10 17:09:15.186" gid="2449664">
+										<prompt selectionType="RANDOM">
+											<item>Would you like to try again?</item>
+										</prompt>
+										<getUserInput
+                                    date="2015-07-10 17:09:15.019" gid="2449665">
+											<input
+                                    isAutoLearnCandidate="true"
+                                    isRelatedNodeCandidate="true"
+                                    comment="No&#xa;$ no"
+                                    date="2015-07-10 17:09:15.194" gid="2449666">
+												<grammar>
+													<item>DISCONFIRMATION - IN2PP</item>
+													<item>no</item>
+												</grammar>
+												<action
+                                    varName="Terminal_Exchange"
+                                    operator="SET_TO_NO" gid="217256"/>
+												<output
+                                    isInsertDNRStatement="true"
+                                    comment="Okay."
+                                    date="2015-07-10 17:09:15.198" gid="2449667">
+													<prompt selectionType="RANDOM">
+														<item>Okay.</item>
+													</prompt>
+													<goto
+                                    date="2015-07-10 17:09:15.202"
+                                    gid="2449668" ref="2456466"/>
+												</output>
+											</input>
+											<input
+                                    isAutoLearnCandidate="true"
+                                    isRelatedNodeCandidate="true"
+                                    comment="Yes&#xa;$ yes"
+                                    date="2015-07-10 17:09:15.206" gid="2449669">
+												<grammar>
+													<item>CONFIRMATION - IN2PP</item>
+													<item>yes</item>
+												</grammar>
+												<output
+                                    isInsertDNRStatement="true"
+                                    comment="Okay. How can I help you?"
+                                    date="2015-07-10 17:09:15.021" gid="2449670">
+													<prompt selectionType="RANDOM">
+														<item>Okay. How can I help you?</item>
+													</prompt>
+													<goto
+                                    date="2015-07-10 17:09:15.214"
+                                    gid="2456471" ref="2414745"/>
+												</output>
+											</input>
+										</getUserInput>
+									</output>
+								</input>
+							</getUserInput>
+						</output>
+					</output>
+				</input>
+				<input isAutoLearnCandidate="true"
+                        isRelatedNodeCandidate="true"
+                        comment="Goodbye&#xa;$ goodbye"
+                        date="2015-07-10 17:09:15.218" gid="2456473">
+					<grammar>
+						<item>PRE-CLOSING/CLOSING - B1PP</item>
+						<item>$ goodbye</item>
+					</grammar>
+					<if date="2015-07-10 17:09:15.222" gid="2456474">
+						<cond varName="Terminal_Exchange"
+                                operator="EQUAL_TO_YES" gid="217209"/>
+					</if>
+					<if date="2015-07-10 17:09:15.226" gid="2456475">
+						<cond varName="Terminal_Exchange"
+                                operator="EQUAL_TO_NO" gid="217210"/>
+						<goto date="2015-07-10 17:09:15.023"
+                                gid="2456477" ref="2449675"/>
+					</if>
+				</input>
+			</folder>
+			<folder date="2015-07-10 17:09:15.506" label="GLOBAL REPAIR SEQUENCES" id="folder_2449615">
+				<input isAutoLearnCandidate="true"
+                        isRelatedNodeCandidate="true"
+                        comment="What did you say?&#xa;$ say that again&#xa;$ say again&#xa;$ what did you say&#xa;$ come again&#xa;$ say what"
+                        date="2015-07-10 17:09:15.306" gid="2443022">
+					<grammar>
+						<item>FULL REPEAT REQUEST - IN1PP</item>
+						<item>$ say that again</item>
+						<item>$ say again</item>
+						<item>$ what did you say</item>
+						<item>$ come again</item>
+						<item>$ say what</item>
+					</grammar>
+					<output isInsertDNRStatement="true"
+                            comment="I said..."
+                            date="2015-07-10 17:09:15.031" gid="2443023">
+						<prompt selectionType="RANDOM">
+							<item>I said...</item>
+						</prompt>
+					</output>
+				</input>
+				<input isAutoLearnCandidate="true"
+                        isRelatedNodeCandidate="true"
+                        comment="Never mind&#xa;$ never mind&#xa;$ nevermind&#xa;$ nvm&#xa;$ forget it"
+                        date="2015-07-10 17:09:15.566" gid="2458202">
+					<grammar>
+						<item>CANCELLATION REQUEST - B1PP</item>
+						<item>$ never mind</item>
+						<item>$ nevermind</item>
+						<item>$ nvm</item>
+						<item>$ forget it</item>
+					</grammar>
+					<output isInsertDNRStatement="true"
+                            comment="Okay."
+                            date="2015-07-10 17:09:15.574" gid="2458204">
+						<prompt selectionType="RANDOM">
+							<item>Okay.</item>
+						</prompt>
+						<goto date="2015-07-10 17:09:15.057"
+                                gid="2458203" ref="2458201"/>
+					</output>
+				</input>
+				<input isAutoLearnCandidate="true"
+                        isRelatedNodeCandidate="true"
+                        comment="What does X stand for?&#xa;$ what does * mean&#xa;$ do you mean by &#xa;$ what are examples of&#xa;$ what is an example of"
+                        date="2015-07-10 17:09:15.586" gid="2456123">
+					<grammar>
+						<item>DEFINITION REQUEST- IN1PP</item>
+						<item>$ what does * mean</item>
+						<item>$ what is a *</item>
+						<item>$ what are *</item>
+						<item>$ do you mean by </item>
+						<item>$ what are examples of</item>
+						<item>$ what is an example of</item>
+					</grammar>
+					<input isAutoLearnCandidate="true"
+                            isRelatedNodeCandidate="true"
+                            comment="IBM&#xa;$ IBM"
+                            date="2015-07-10 17:09:15.059" gid="2456124">
+						<grammar>
+							<item>KNOWN ENTITY</item>
+							<item>$ IN-SCOPE-ENTITY</item>
+						</grammar>
+						<output isInsertDNRStatement="true"
+                                comment="&lt;i>IBM&lt;/i> stands for International Business Machines."
+                                date="2015-07-10 17:09:15.594" gid="2456125">
+							<prompt selectionType="RANDOM">
+								<item>EFA Stands for eFirstAid</item>
+							</prompt>
+							<getUserInput
+                                    date="2015-07-10 17:09:15.598" gid="2456127">
+								<input isAutoLearnCandidate="true"
+                                    isRelatedNodeCandidate="true"
+                                    comment="Okay"
+                                    date="2015-07-10 17:09:15.602" gid="2456126">
+									<grammar>
+										<item>RECEIPT - SC3</item>
+										<item>okay</item>
+									</grammar>
+								</input>
+							</getUserInput>
+						</output>
+					</input>
+				</input>
+			</folder>
+			<folder date="2015-07-10 17:09:15.051" label="SMALL TALK SEQUENCES" id="folder_2449616">
+				<input isAutoLearnCandidate="true"
+                        isRelatedNodeCandidate="true"
+                        comment="What is your favorite...&#xa;$ your favorite&#xa;$ you like&#xa;$ you prefer"
+                        date="2015-07-10 17:09:15.234" gid="2456340">
+					<grammar>
+						<item>OFF-TASK INQUIRY - B1PP</item>
+					</grammar>
+					<input isAutoLearnCandidate="true"
+                            isRelatedNodeCandidate="true"
+                            comment="Movie&#xa;$ movie"
+                            date="2015-07-10 17:09:15.238" gid="2456341">
+						<grammar>
+							<item>KNOWN ENTITY</item>
+						</grammar>
+						<action varName="Topic" operator="SET_TO" gid="217166">movie</action>
+						<output isInsertDNRStatement="true"
+                                comment="2001: A Space Odyssey. I like movies with a strong AI lead."
+                                date="2015-07-10 17:09:15.242" gid="2456342">
+							<prompt selectionType="RANDOM">
+								<item>ANSWER - B2PP</item>
+							</prompt>
+							<getUserInput
+                                    date="2015-07-10 17:09:15.246" gid="2456344">
+								<input isAutoLearnCandidate="true"
+                                    isRelatedNodeCandidate="true"
+                                    comment="okay&#xa;haha"
+                                    date="2015-07-10 17:09:15.025" gid="2456345">
+									<grammar>
+										<item>RECEIPT - SC3</item>
+										<item>$ haha</item>
+										<item>$ okay</item>
+									</grammar>
+									<goto
+                                    date="2015-07-10 17:09:15.274"
+                                    gid="2456632" ref="2414737"/>
+								</input>
+							</getUserInput>
+						</output>
+					</input>
+				</input>
+			</folder>
+		</folder>
+
+		<folder label="Concepts" id="Concepts">
+			<concept>
+				<grammar>
+					<item>bleeding</item>
+					<item>blood extravasation</item>
+					<item>hemorrhagic</item>
+					<item>nosebleed</item>
+					<item>haemorhage</item>
+					<item>injury</item>
+				</grammar>
+			</concept>
+			<concept>
+				<grammar>
+					<item>heart attack</item>
+					<item>cardiovascular disease</item>
+					<item>cardiac arrest</item>
+					<item>chest pains</item>
+				</grammar>
+			</concept>
+			<concept>
+				<grammar>allergic</grammar>
+				<grammar>allergy</grammar>
+				<grammar>hypersensitive</grammar>
+				<grammar>sensitive</grammar>
+				<grammar>susceptible</grammar>
+				<grammar>sensitized</grammar>
+			</concept>
+			<concept>
+				<grammar>I want to</grammar>
+				<grammar>I would like to</grammar>
+				<grammar>Tell me how to</grammar>
+				<grammar>Tell me about</grammar>
+			</concept>
+			<concept >
+				<grammar>
+					<item>okay</item>
+					<item>ok</item>
+					<item>thanks</item>
+					<item>thank you</item>
+					<item>all right</item>
+					<item>alright</item>
+					<item>great</item>
+					<item>cool</item>
+					<item>great</item>
+					<item>darn</item>
+					<item>cool</item>
+					<item>aww</item>
+					<item>awww</item>
+					<item>oh</item>
+					<item>oh okay</item>
+					<item>oh ok</item>
+					<item>ah okay</item>
+					<item>ah ok</item>
+				</grammar>
+			</concept>
+			<concept>
+                <grammar>
+                    <item>No</item>
+                    <item>absolutely not</item>
+                    <item>apparently not</item>
+                    <item>Are not</item>
+                    <item>By no means</item>
+                    <item>Certainly not</item>
+                    <item>Definitely not</item>
+                    <item>Hardly</item>
+                    <item>Heck no</item>
+                    <item>Hell no</item>
+                    <item>I suppose not</item>
+                    <item>Negative</item>
+                    <item>never </item>
+                    <item>nix  </item>
+                    <item>no no</item>
+                    <item>no no no</item>
+                    <item>No not at all</item>
+                    <item>No not really</item>
+                    <item>No thank you</item>
+                    <item>no thanks</item>
+                    <item>No way</item>
+                    <item>Non</item>
+                    <item>None</item>
+                    <item>nope</item>
+                    <item>not at all  </item>
+                    <item>not by any means</item>
+                    <item>Not completely</item>
+                    <item>Not especially</item>
+                    <item>Not particularly</item>
+                    <item>not really</item>
+                    <item>not right now</item>
+                    <item>Not that I know of</item>
+                    <item>of course not</item>
+                    <item>please no</item>
+                    <item>probably not</item>
+                    <item>nopeity-nope-nope</item>
+                    <item>n-n-n-no</item>
+                    <item>n-o</item>
+                </grammar>
+            </concept>
+            <concept description="OI 15/7/11: Item &quot;Sure&quot; was removed from this list as it was causing issues with matches when two different input nodes had &quot;I am not sure&quot; and &quot;$ yes&quot;.  OI: 4/8/11: &quot;fine&quot; and &quot;Good&quot; were removed as well  MO 18/10/12 removed &quot;all right&quot; and &quot;alright&quot; as they were causing conflict in perfect boyfriend  MO 29/10/12 removed &quot;always&quot;">
+                <grammar>
+                    <item>yes</item>
+                    <item>Absolutely</item>
+                    <item>absolutely correct</item>
+                    <item>absolutely yes</item>
+                    <item>Affirmative</item>
+                    <item>affirmative yes</item>
+                    <item>Ah yes</item>
+                    <item>Apparently</item>
+                    <item>Apparently so</item>
+                    <item>As far as I know</item>
+                    <item>aye</item>
+                    <item>by all means </item>
+                    <item>certainly</item>
+                    <item>Completely</item>
+                    <item>Constantly</item>
+                    <item>Correct</item>
+                    <item>dam right</item>
+                    <item>damn right</item>
+                    <item>Definite</item>
+                    <item>Definitely</item>
+                    <item>Especially</item>
+                    <item>Evidently</item>
+                    <item>exactly</item>
+                    <item>Extremely</item>
+                    <item>For sure</item>
+                    <item>Fully</item>
+                    <item>Generally</item>
+                    <item>gladly  </item>
+                    <item>good enough</item>
+                    <item>granted</item>
+                    <item>heck yes</item>
+                    <item>Hell yes</item>
+                    <item>I believe so</item>
+                    <item>I decided yes</item>
+                    <item>I think so</item>
+                    <item>In this case</item>
+                    <item>indeed</item>
+                    <item>Ja</item>
+                    <item>Most definitely</item>
+                    <item>naturally</item>
+                    <item>of course </item>
+                    <item>Okie dokie</item>
+                    <item>Oui</item>
+                    <item>please yes</item>
+                    <item>positively</item>
+                    <item>positively yes</item>
+                    <item>precisely</item>
+                    <item>right on</item>
+                    <item>Si</item>
+                    <item>spot on</item>
+                    <item>sure thing</item>
+                    <item>surely</item>
+                    <item>Uh huh</item>
+                    <item>uh-huh</item>
+                    <item>undoubtedly</item>
+                    <item>unquestionably</item>
+                    <item>very well  </item>
+                    <item>why yes</item>
+                    <item>willingly</item>
+                    <item>without fail</item>
+                    <item>word</item>
+                    <item>yah</item>
+                    <item>yeah</item>
+                    <item>yep</item>
+                    <item>yes please</item>
+                    <item>Yes really</item>
+                    <item>Yes right</item>
+                    <item>Yes sometimes</item>
+                    <item>Yes sure</item>
+                    <item>yes yes</item>
+                    <item>yes yes yes</item>
+                    <item>Yes you</item>
+                    <item>you bet</item>
+                    <item>you got it</item>
+                    <item>yup</item>
+                    <item>yyeah</item>
+                    <item>yyep</item>
+                    <item>yyes</item>
+                    <item>yyyyyyyyyyyyyyyyesssssss</item>
+                    <item>yuup</item>
+                    <item>yuupp</item>
+                    <item>yuur</item>
+                    <item>yuuu</item>
+                    <item>yuuup</item>
+                    <item>yuuupppp</item>
+                    <item>yus</item>
+                    <item>yuperoo</item>
+                    <item>yuperz</item>
+                    <item>yupidydoda</item>
+                    <item>yupiii</item>
+                    <item>yupo</item>
+                    <item>yupp</item>
+                    <item>yuppers</item>
+                    <item>yupperz</item>
+                    <item>yuppie</item>
+                    <item>yuppp</item>
+                    <item>yuppper</item>
+                    <item>yupppers</item>
+                    <item>yupppp</item>
+                    <item>yupppppp</item>
+                    <item>yups</item>
+                    <item>yupyup</item>
+                    <item>yupz</item>
+                    <item>yupzz</item>
+                    <item>yesz</item>
+                    <item>yesyes</item>
+                    <item>yesyesyes</item>
+                    <item>yesyesyesyes</item>
+                    <item>yesyesyesyesyes</item>
+                    <item>yesyesyesyesyesyes</item>
+                    <item>yesyesyesyesyesyesyes</item>
+                    <item>yez</item>
+                    <item>yezz</item>
+                    <item>yezzir</item>
+                    <item>yha</item>
+                    <item>yipyesg</item>
+                    <item>yesh</item>
+                    <item>yeshum</item>
+                    <item>yeshums</item>
+                    <item>yesi i</item>
+                    <item>yesish</item>
+                    <item>yesit it</item>
+                    <item>yesly</item>
+                    <item>yesm</item>
+                    <item>yesn</item>
+                    <item>yesq</item>
+                    <item>yess</item>
+                    <item>yesseess</item>
+                    <item>yesshhh</item>
+                    <item>yessiere</item>
+                    <item>yessin</item>
+                    <item>yessir</item>
+                    <item>yessiree</item>
+                    <item>yessireeee</item>
+                    <item>yessm</item>
+                    <item>yesss</item>
+                    <item>yessss</item>
+                    <item>yessum</item>
+                    <item>yeper</item>
+                    <item>yeperdoodles</item>
+                    <item>yepers</item>
+                    <item>yeples</item>
+                    <item>yepo</item>
+                    <item>yepp</item>
+                    <item>yeppah</item>
+                    <item>yepper</item>
+                    <item>yeppers</item>
+                    <item>yepperz</item>
+                    <item>yeppie</item>
+                    <item>yeppo</item>
+                    <item>yeppp</item>
+                    <item>yeppppppp</item>
+                    <item>yepppppppppppppppppppppp</item>
+                    <item>yeppurs</item>
+                    <item>yeppy</item>
+                    <item>yeppz</item>
+                    <item>yeps</item>
+                    <item>yepsiree</item>
+                    <item>yepster</item>
+                    <item>yepyep</item>
+                    <item>yepyepyepyepyepyepy</item>
+                    <item>yepz</item>
+                    <item>yer</item>
+                    <item>yeess</item>
+                    <item>yeesss</item>
+                    <item>yeessss</item>
+                    <item>yeesssss</item>
+                    <item>yehh</item>
+                    <item>yehhh</item>
+                    <item>yehhhh</item>
+                    <item>yeh</item>
+                    <item>yehhhhhhhhh</item>
+                    <item>yerr</item>
+                    <item>yerrr</item>
+                    <item>yerrrr</item>
+                    <item>yeea</item>
+                    <item>yeeaaah</item>
+                    <item>yeeaah</item>
+                    <item>yeeaahh</item>
+                    <item>yeeaahhh</item>
+                    <item>yeeah</item>
+                    <item>yeeargh</item>
+                    <item>yeeeah</item>
+                    <item>yeeeeaaaaaaah</item>
+                    <item>yeeeeaaaaahhh</item>
+                    <item>yeeeeaaah</item>
+                    <item>yeeeeah</item>
+                    <item>yeeeee</item>
+                    <item>yeeeeeah</item>
+                    <item>sure</item>
+                </grammar>
+            </concept>
+            <concept>
+                <grammar>
+                    <item>I would like</item>
+                    <item>I want</item>
+                    <item>Give me</item>
+                    <item>Lets do</item>
+                    <item>I choose</item>
+                </grammar>
+            </concept>
+			
+			
+			<concept >
+				<grammar>
+					<item>haha</item>
+					<item>hehe</item>
+					<item>lol</item>
+					<item>rofl</item>
+					<item>lmao</item>
+				</grammar>
+			</concept>
+			<concept >
+				<grammar>
+					<item>what's</item>
+					<item>what is</item>
+				</grammar>
+			</concept>
+			<concept >
+				<grammar>
+					<item>Hello</item>
+					<item>helo</item>
+					<item>halo</item>
+					<item>hallo</item>
+					<item>Hi</item>
+					<item>Hola</item>
+					<item>Howdy</item>
+					<item>Hiya</item>
+					<item>Hey</item>
+					<item>Heya</item>
+					<item>yello</item>
+					<item>aloha</item>
+				</grammar>
+			</concept>
+			<concept >
+				<grammar>
+					<item>Goodbye</item>
+					<item>bye bye</item>
+					<item>bye</item>
+					<item>later</item>
+					<item>laters</item>
+					<item>see you later</item>
+					<item>see you</item>
+					<item>see ya later</item>
+					<item>see ya</item>
+					<item>cya</item>
+					<item>au revoir</item>
+				</grammar>
+			</concept>
+
+
+		</folder>
+
+	</flow>	
+
+	<variables>
+		<var_folder name="Home" gid="VAR">
+			<var name="Topic" type="TEXT" gid="17139"/>
+			<var name="Request_Success" type="YESNO" description="Did the user find what s/he was looking for?" gid="17621"/>
+			<var name="Terminal_Exchange" type="YESNO" initValue="No" description="Has the system already said goodbye?" gid="17622"/>
+			<var name="Entity_Preference" type="TEXT" description="Entity indicated by user." gid="19552"/>
+			<var name="emergency_type" type="TEXT" description="Type of emergency that being requested by user" />
+			<var name="emergency_media" type="TEXT" description="Type of emergency media that being requested to be displayed by user" />
+		</var_folder>
+	</variables>
+
+</dialog>

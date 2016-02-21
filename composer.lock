@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "93bcc946320af7396c4f5272f454e042",
-    "content-hash": "2fa442af85c35e671c32beb6f7c2c1fe",
+    "hash": "d63d9d5ef7f776c183801697bc06064a",
+    "content-hash": "e4cc3ef4fd803b1cb26edd62727c7bfc",
     "packages": [
         {
             "name": "bower-asset/bootstrap",
@@ -57,6 +57,43 @@
             ]
         },
         {
+            "name": "bower-asset/fontawesome",
+            "version": "v4.5.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/FortAwesome/Font-Awesome.git",
+                "reference": "fddd2c240452e6c8990c4ef75e0265b455aa7968"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/FortAwesome/Font-Awesome/zipball/fddd2c240452e6c8990c4ef75e0265b455aa7968",
+                "reference": "fddd2c240452e6c8990c4ef75e0265b455aa7968",
+                "shasum": ""
+            },
+            "type": "bower-asset-library",
+            "extra": {
+                "bower-asset-main": [
+                    "less/font-awesome.less",
+                    "scss/font-awesome.scss"
+                ],
+                "bower-asset-ignore": [
+                    "*/.*",
+                    "*.json",
+                    "src",
+                    "*.yml",
+                    "Gemfile",
+                    "Gemfile.lock",
+                    "*.md"
+                ]
+            },
+            "license": [
+                "OFL-1.1",
+                "MIT",
+                "CC-BY-3.0"
+            ],
+            "description": "Font Awesome"
+        },
+        {
             "name": "bower-asset/jquery",
             "version": "2.2.0",
             "source": {
@@ -86,6 +123,34 @@
                 "jquery",
                 "library"
             ]
+        },
+        {
+            "name": "bower-asset/jquery-form",
+            "version": "3.46.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/malsup/form.git",
+                "reference": "82355b0c6aacea6bcea4a64da7f9a250aa18addc"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/malsup/form/zipball/82355b0c6aacea6bcea4a64da7f9a250aa18addc",
+                "reference": "82355b0c6aacea6bcea4a64da7f9a250aa18addc",
+                "shasum": ""
+            },
+            "require": {
+                "bower-asset/jquery": ">=1.5"
+            },
+            "type": "bower-asset-library",
+            "extra": {
+                "bower-asset-main": "jquery.form.js",
+                "bower-asset-ignore": [
+                    "README.md",
+                    "composer.json",
+                    "form.jquery.json",
+                    "package.json"
+                ]
+            }
         },
         {
             "name": "bower-asset/jquery.inputmask",
@@ -134,6 +199,73 @@
             ]
         },
         {
+            "name": "bower-asset/jquery.nicescroll",
+            "version": "v3.6.7",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/inuyaksa/jquery.nicescroll.git",
+                "reference": "2da0f87d55ab5ab8930707647cf9523fc9478c81"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/inuyaksa/jquery.nicescroll/zipball/2da0f87d55ab5ab8930707647cf9523fc9478c81",
+                "reference": "2da0f87d55ab5ab8930707647cf9523fc9478c81",
+                "shasum": ""
+            },
+            "require": {
+                "bower-asset/jquery": ">=1.8.3"
+            },
+            "type": "bower-asset-library",
+            "extra": {
+                "bower-asset-main": [
+                    "./jquery.nicescroll.js",
+                    "./zoomico.png"
+                ],
+                "bower-asset-ignore": [
+                    "**/.*",
+                    "demo",
+                    "package.json"
+                ]
+            }
+        },
+        {
+            "name": "bower-asset/moment",
+            "version": "2.11.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/moment/moment.git",
+                "reference": "dd9cff0104c0dc3f114f54107397c59920e764cc"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/moment/moment/zipball/dd9cff0104c0dc3f114f54107397c59920e764cc",
+                "reference": "dd9cff0104c0dc3f114f54107397c59920e764cc",
+                "shasum": ""
+            },
+            "type": "bower-asset-library",
+            "extra": {
+                "bower-asset-main": "moment.js",
+                "bower-asset-ignore": [
+                    "**/.*",
+                    "benchmarks",
+                    "bower_components",
+                    "meteor",
+                    "node_modules",
+                    "scripts",
+                    "tasks",
+                    "test",
+                    "component.json",
+                    "composer.json",
+                    "CONTRIBUTING.md",
+                    "ender.js",
+                    "Gruntfile.js",
+                    "Moment.js.nuspec",
+                    "package.js",
+                    "package.json"
+                ]
+            }
+        },
+        {
             "name": "bower-asset/punycode",
             "version": "v1.3.2",
             "source": {
@@ -160,6 +292,61 @@
                     "package.json"
                 ]
             }
+        },
+        {
+            "name": "bower-asset/riot",
+            "version": "v2.3.15",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/riot/riot.git",
+                "reference": "a8505000a8cdda7af23443169a81b1875fc04d43"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/riot/riot/zipball/a8505000a8cdda7af23443169a81b1875fc04d43",
+                "reference": "a8505000a8cdda7af23443169a81b1875fc04d43",
+                "shasum": ""
+            },
+            "type": "bower-asset-library",
+            "extra": {
+                "bower-asset-main": "riot.js",
+                "bower-asset-ignore": [
+                    "**/*",
+                    "!/riot.js",
+                    "!/riot.min.js",
+                    "!/riot+compiler.js",
+                    "!/riot+compiler.min.js"
+                ]
+            },
+            "license": [
+                "MIT"
+            ],
+            "description": "A React-like user interface micro-library",
+            "keywords": [
+                "client-side",
+                "controller",
+                "custom elements",
+                "custom tags",
+                "data binding",
+                "declarative",
+                "framework",
+                "jsx",
+                "minimal",
+                "minimalist",
+                "model",
+                "mvc",
+                "polymer",
+                "react",
+                "riot.js",
+                "riotjs",
+                "router",
+                "shadow dom",
+                "template",
+                "templating",
+                "view",
+                "virtual dom",
+                "web components"
+            ]
         },
         {
             "name": "bower-asset/yii2-pjax",
