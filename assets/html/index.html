@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>EFA | electronic First-aid</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<!--[if IE]>
+			<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.1/animate.min.css" rel="stylesheet" type="text/css">
+		<link href="style.css" rel="stylesheet" type="text/css">
+		<script type="text/javascript" src="https://code.jquery.com/jquery-1.10.2.js"></script>
+		<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<div class="holder">
+	<div id="wrap" class="wrap">
+		<div class="splash fadeIn animated">
+				<div class="splash-image zoomIn animated">
+						<img src="images/logo-big.png" alt="logo">
+				</div>
+				<!-- /splash-img -->
+				<div class="splash-btn zoomIn animated">
+						<a class="btn btn-success" id="start-me">Get Started</a>
+				</div>
+				<!-- /splash-btn -->
+		</div>
+		<!-- /splash -->
+		<div class="content">
+				<div class="header animated">
+						<div class="brand">
+								<img src="images/logo.png">
+								<span>eFIRST-AID</span>
+						</div>
+				</div>
+				<!-- /header -->
+				<div class="chat-box animated">
+					<ul class="list-unstyled"> 
+						<li class="efa clearfix"> 
+							<div class="whois">
+								<span class="person">EFA</span>
+								<span class="date">11.00 AM, Today</span>
+							</div>
+							<p class="pull-right">Hello, I am EFA - Your Virtual 'First Aid' Assistance.</p>
+						</li>
+						<li class="client clearfix">
+							<div class="whois">
+								<span class="person">You</span>
+								<span class="date">11.01 AM, Today</span>
+							</div>
+							<p class="pull-left">yo</p>
+						</li>
+						<li class="efa clearfix"> 
+							<div class="whois">
+								<span class="person">EFA</span>
+								<span class="date">11.01 AM, Today</span>
+							</div>
+							<p class="pull-right">Hi, how are you today?</p>
+						</li> 
+						<li class="client clearfix">
+							<div class="whois">
+								<span class="person">You</span>
+								<span class="date">11.01 AM, Today</span>
+							</div>
+							<p class="pull-left">my friend slashed by Jason, and bleeding so much!</p>
+						</li>
+						<li class="efa clearfix"> 
+							<div class="whois">
+								<span class="person">EFA</span>
+								<span class="date">11.01 AM, Today</span>
+							</div>
+							<p class="pull-right">
+								Choose from these informations below
+								<span class="btn-box">
+									<button class="btn btn-faq btn-primary">FAQ</button>
+									<button class="btn btn-steps btn-warning">STEPS</button>
+									<button class="btn btn-video btn-danger">VIDEO</button>
+								</span>
+							</p>
+						</li> 
+					</ul>
+				</div>
+				<!-- /chat-box -->
+				<div class="msg-box animated">
+					<form>
+						<input class="msg-me form-control" type="text" placeholder="Type your message">
+						<button class="btn btn-send" aria-label="Send"><i class="fa fa-paper-plane"></i></button>
+					</form>
+				</div> 
+				<!-- /msg-box -->
+		</div>
+		<!-- /content -->
+	</div>
+	<!-- /wrap -->
+
+	<div class="info-box animated">
+		<div class="heading">
+			<h2 class="title">FAQ / STEPS / VIDEO</h2>
+			<a href="#" class="closeme">&times;</a>
+		</div>
+	</div>
+	<!-- /info-box -->
+	</div>
+	<!-- /holder -->
+
+	<script type="text/javascript">
+
+			$(".content, .info-box").hide();
+			
+			$('.splash-btn').on('click', function() {
+
+				$(".splash-image, .splash-btn")
+					.removeClass("zoomIn")
+					.addClass("fadeOut");
+
+				$(".splash")
+					.removeClass("fadeIn")
+					.addClass("splash-exit");
+
+				$(".content").show();
+
+				$(".header")
+					.addClass("fadeInDown")
+					.addClass("go");
+
+				$(".msg-box")
+					.addClass("fadeInUp")
+					.addClass("go");
+
+				$(".chat-box")
+					.addClass("bounceInDown")
+					.addClass("go");
+
+			});
+
+			$('.btn-faq, .btn-steps, .btn-video').on('click', function() {
+
+				$(".wrap")
+					.removeClass("comeback")
+					.addClass("goLeft");
+
+				$(".info-box").show();
+				
+				$(".info-box")
+					.removeClass("bounceOutRight")
+					.addClass("bounceInRight");
+			});
+
+			$('.closeme').on('click', function() {
+
+				$(".wrap")
+					.removeClass("goLeft")
+					.addClass("comeback");
+
+				$(".info-box")
+					.removeClass("bounceInRight")
+					.addClass("bounceOutRight");
+
+			});
+
+	</script>
+</body>
+</html>
