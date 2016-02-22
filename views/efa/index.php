@@ -1,7 +1,3 @@
-<div class="col-xs-12">
-			
-				<div class="main-content" id="main-content">
-					
-					
-				</div>
-</div>
+<?php $this->title = 'EFA - eFirst Aid' ?>
+
+<div class="holder" id="holder"> </div>

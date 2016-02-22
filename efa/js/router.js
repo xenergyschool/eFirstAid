@@ -28,7 +28,7 @@ var router = {
 					
 					this.contentPage && this.contentPage.unmount(true);
 					
-					riot.mount('div#main-content',tag,options);
+					riot.mount('div#holder',tag,options);
 				},
 				
 			}

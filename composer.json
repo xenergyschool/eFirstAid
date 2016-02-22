@@ -23,7 +23,8 @@
         "bower-asset/jquery-form": "~3.46.0",
         "bower-asset/fontawesome":"*",
         "bower-asset/moment":"*",
-        "bower-asset/jquery.nicescroll": "~3.6.6"
+        "bower-asset/jquery.nicescroll": "~3.6.6",
+        "bower-asset/animate.css" : "*"
     },
     "require-dev": {
         "yiisoft/yii2-codeception": "*",

@@ -17,7 +17,7 @@ class AppAsset extends AssetBundle
 {
     public $sourcePath = '@app/efa';
     public $css = [
-        //'css/site.css',
+        'css/style.css',
     ];
     public $js = [
         'js/router.js',

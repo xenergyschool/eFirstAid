@@ -17,11 +17,13 @@ class ThirdAsset extends AssetBundle
 {
    public $sourcePath = '@app/vendor/bower';
     public $css = [
-        'fontawesome/css/font-awesome.css'
-        
+        'fontawesome/css/font-awesome.css',
+        'animate.css/animate.css'
         ];
     public $js = [
         'jquery-form/jquery.form.js',
+        'moment/moment.js',
+        'jquery.nicescroll/jquery.nicescroll.js',
         'riot/riot+compiler.js'
     ];
     

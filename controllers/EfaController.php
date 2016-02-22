@@ -20,7 +20,7 @@ class EfaController extends Controller{
     public function actionConversation(){
         
              $request = Yii::$app->request;
-			// prepare and return a data provider for the "index" 
+		
 			$post =  $request->post(); 
 				unset($post['_csrf']);
 		    	$response = Yii::$app->response;
@@ -42,12 +42,28 @@ class EfaController extends Controller{
     public function actionProfile(){
         
          $request = Yii::$app->request;
-			// prepare and return a data provider for the "index" 
+			
 			$get =  $request->get(); 
 				unset($get['_csrf']);
 		    	$response = Yii::$app->response;
                 $response->format = \yii\web\Response::FORMAT_JSON;
                 $response->data = Yii::$app->watsondialog->getProfile($get);
+        
+    }
+    
+    public function actionMedia(){
+        
+           $request = Yii::$app->request;
+		
+			$get =  $request->get(); 
+			unset($get['_csrf']);
+			
+			$media = file_get_contents(Yii::getAlias('@app/efa/json/'.$get['emergency_type'] . '.json'));
+			
+			$response = Yii::$app->response;
+            $response->format = \yii\web\Response::FORMAT_JSON;
+            $response->data = json_decode($media);
+        
         
     }
 }

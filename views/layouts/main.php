@@ -24,13 +24,10 @@ AppAsset::register($this);
 <body>
 <?php $this->beginBody() ?>
 
-<div class="container-fluid">
 
-    <div class="row">
-       
+    
         <?= $content ?>
-    </div>
-</div>
+
 
 
 

@@ -4,9 +4,36 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "d63d9d5ef7f776c183801697bc06064a",
-    "content-hash": "e4cc3ef4fd803b1cb26edd62727c7bfc",
+    "hash": "b217ac5520f749037f2704450a5f3b34",
+    "content-hash": "04feb285d85c8ae12de69463658f9f96",
     "packages": [
+        {
+            "name": "bower-asset/animate.css",
+            "version": "3.5.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/daneden/animate.css.git",
+                "reference": "010e06e11175840ae84ad9363f7269f03775d963"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/daneden/animate.css/zipball/010e06e11175840ae84ad9363f7269f03775d963",
+                "reference": "010e06e11175840ae84ad9363f7269f03775d963",
+                "shasum": ""
+            },
+            "type": "bower-asset-library",
+            "extra": {
+                "bower-asset-main": "./animate.css",
+                "bower-asset-ignore": [
+                    ".*",
+                    "source",
+                    "*.yml",
+                    "Gemfile",
+                    "Gemfile.lock",
+                    "*.md"
+                ]
+            }
+        },
         {
             "name": "bower-asset/bootstrap",
             "version": "v3.3.5",
