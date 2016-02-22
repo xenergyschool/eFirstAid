@@ -7,7 +7,8 @@
 			<output>
 				<prompt selectionType="RANDOM">
 					<item>Hello, I am EFA - Your Virtual 'First Aid' Assistant.&#xD;
-					How can I help you?	</item>
+					How can I help you?	&#xD;
+					Try typing: bleeding, stroke, heartattack, brokenbone, headinjury, etc. </item>
 				</prompt>
 				<goto ref="getUserInput_123" />
 			</output>
